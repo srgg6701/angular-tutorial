@@ -8,17 +8,17 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 17, ../../sass/screen.scss */
+/* line 16, ../../sass/screen.scss */
 .blog-footer a {
   color: white;
 }
-/* line 20, ../../sass/screen.scss */
+/* line 19, ../../sass/screen.scss */
 .blog-footer p {
   line-height: 50px;
   margin: 0 auto;
 }
 
-/* line 25, ../../sass/screen.scss */
+/* line 24, ../../sass/screen.scss */
 .navbar[role="navigation"] {
   margin-top: 4px;
 }
