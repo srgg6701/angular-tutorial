@@ -2,5 +2,5 @@
 
 app.controller('contactsController',
     function contactsController($scope, $http){
-        console.log('Hello! Contacts controller comes here.');
+		//console.log('Hello! Contacts controller comes here.');
 });

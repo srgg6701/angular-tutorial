@@ -6,7 +6,7 @@
 body {
   color: black;
   font-family: Cambria, "Times New Roman";
-  font-size: 1.7em;
+  font-size: 18px;
 }
 
 /* line 16, ../../sass/screen.scss */
@@ -29,15 +29,19 @@ body {
 .navbar[role="navigation"] {
   margin-top: 4px;
 }
-/* line 31, ../../sass/screen.scss */
+/* line 30, ../../sass/screen.scss */
+.navbar[role="navigation"] .dropdown-menu {
+  right: inherit;
+}
+/* line 34, ../../sass/screen.scss */
 .navbar[role="navigation"] a.navbar-brand {
   height: inherit;
 }
-/* line 34, ../../sass/screen.scss */
+/* line 37, ../../sass/screen.scss */
 .navbar[role="navigation"] a img {
   margin-left: -15px;
 }
-/* line 37, ../../sass/screen.scss */
+/* line 40, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
   margin-top: 14px;
@@ -45,7 +49,7 @@ body {
   display: inline-block;
   font-size: 1.3em;
 }
-/* line 45, ../../sass/screen.scss */
+/* line 48, ../../sass/screen.scss */
 .navbar[role="navigation"] ul {
   margin-top: 15px;
 }

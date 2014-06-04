@@ -6,6 +6,10 @@ var app = angular.module('tApp',['ngResource'])
             templateUrl:'templates/default.html',
             controller: 'defaultController'
         })
+        .when('/skeleton',{
+            templateUrl:'templates/skeleton.html',
+            controller: 'skeletonController'
+        })
         .when('/contacts',{
             templateUrl:'templates/contacts.html',
             controller: 'contactsController'

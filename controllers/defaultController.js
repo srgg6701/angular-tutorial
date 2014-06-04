@@ -2,5 +2,5 @@
 
 app.controller('defaultController',
     function defaultController($scope, $http){
-        console.log('Hello! Default controller comes here.');
+		//console.log('Hello! Default controller comes here.');
 });
