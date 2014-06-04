@@ -75,7 +75,7 @@ code pre {
 /* line 71, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
-  margin-top: 14px;
+  margin-top: 21px;
   float: left;
   display: inline-block;
   font-size: 1.3em;
@@ -93,4 +93,14 @@ span.framed {
   display: inline-block;
   margin: -1px auto;
   padding: 0px 4px;
+}
+
+/* line 93, ../../sass/screen.scss */
+#super-hero {
+  float: left;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #0060A2;
+  margin-left: -80px;
+  margin-top: 5px;
 }

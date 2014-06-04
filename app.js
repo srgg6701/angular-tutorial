@@ -15,6 +15,10 @@ var app = angular.module('tApp',[])
             templateUrl:'templates/dynamic.html',
             controller: 'dynamicController'
         })
+        .when('/jquery',{
+            templateUrl:'templates/jquery.html',
+            controller: 'jqueryController'
+        })
 		.when('/server',{
             templateUrl:'templates/server.html',
             controller: 'serverController'
@@ -22,6 +26,10 @@ var app = angular.module('tApp',[])
 		.when('/crud',{
             templateUrl:'templates/crud.html',
             controller: 'crudController'
+        })
+		.when('/tests',{
+            templateUrl:'templates/tests.html',
+            controller: 'testsController'
         })
 		// Архитектура
         .when('/controllers',{
