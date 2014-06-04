@@ -2,46 +2,57 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 11, ../../sass/screen.scss */
+/* line 12, ../../sass/screen.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 16, ../../sass/screen.scss */
 body {
   color: black;
   font-family: Cambria, "Times New Roman";
   font-size: 18px;
 }
 
-/* line 16, ../../sass/screen.scss */
+/* line 22, ../../sass/screen.scss */
+#main {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin-bottom: -50px;
+  padding-bottom: 60px;
+  padding-top: 4px;
+}
+
+/* line 30, ../../sass/screen.scss */
 .blog-footer {
   background-color: #1995dc;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  height: 50px;
 }
-/* line 20, ../../sass/screen.scss */
+/* line 35, ../../sass/screen.scss */
 .blog-footer a {
   color: white;
 }
-/* line 23, ../../sass/screen.scss */
+/* line 38, ../../sass/screen.scss */
 .blog-footer p {
   line-height: 50px;
   margin: 0 auto;
 }
 
-/* line 28, ../../sass/screen.scss */
-.navbar[role="navigation"] {
-  margin-top: 4px;
-}
-/* line 30, ../../sass/screen.scss */
+/* line 44, ../../sass/screen.scss */
 .navbar[role="navigation"] .dropdown-menu {
   right: inherit;
 }
-/* line 34, ../../sass/screen.scss */
+/* line 48, ../../sass/screen.scss */
 .navbar[role="navigation"] a.navbar-brand {
   height: inherit;
 }
-/* line 37, ../../sass/screen.scss */
+/* line 51, ../../sass/screen.scss */
 .navbar[role="navigation"] a img {
   margin-left: -15px;
 }
-/* line 40, ../../sass/screen.scss */
+/* line 54, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
   margin-top: 14px;
@@ -49,7 +60,7 @@ body {
   display: inline-block;
   font-size: 1.3em;
 }
-/* line 48, ../../sass/screen.scss */
+/* line 62, ../../sass/screen.scss */
 .navbar[role="navigation"] ul {
   margin-top: 15px;
 }
