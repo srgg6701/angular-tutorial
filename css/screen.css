@@ -40,19 +40,39 @@ body {
   margin: 0 auto;
 }
 
-/* line 44, ../../sass/screen.scss */
+/* line 43, ../../sass/screen.scss */
+code {
+  display: block;
+  margin: 15px auto;
+}
+/* line 46, ../../sass/screen.scss */
+code pre {
+  display: block;
+  padding: inherit;
+  margin: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  word-break: inherit;
+  word-wrap: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+  border-radius: inherit;
+}
+
+/* line 61, ../../sass/screen.scss */
 .navbar[role="navigation"] .dropdown-menu {
   right: inherit;
 }
-/* line 48, ../../sass/screen.scss */
+/* line 65, ../../sass/screen.scss */
 .navbar[role="navigation"] a.navbar-brand {
   height: inherit;
 }
-/* line 51, ../../sass/screen.scss */
+/* line 68, ../../sass/screen.scss */
 .navbar[role="navigation"] a img {
   margin-left: -15px;
 }
-/* line 54, ../../sass/screen.scss */
+/* line 71, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
   margin-top: 14px;
@@ -60,7 +80,17 @@ body {
   display: inline-block;
   font-size: 1.3em;
 }
-/* line 62, ../../sass/screen.scss */
-.navbar[role="navigation"] ul {
+/* line 79, ../../sass/screen.scss */
+.navbar[role="navigation"] ul:nth-child(1) {
   margin-top: 15px;
+}
+
+/* line 84, ../../sass/screen.scss */
+span.framed {
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  background-color: #eaebec;
+  display: inline-block;
+  margin: -1px auto;
+  padding: 0px 4px;
 }
