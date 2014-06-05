@@ -1,6 +1,7 @@
 'use strict';
-var app = angular.module('tApp',[])
+var app = angular.module('tApp',['menu'])
   .config( function($routeProvider, $locationProvider){
+
     // адреса разделов:
     var menu = [
         'default',
