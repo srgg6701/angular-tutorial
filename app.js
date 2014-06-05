@@ -27,16 +27,16 @@ var app = angular.module('tApp',[])
 
     for(var i in menu){
         var start=(menu[i]=='default')? '':menu[i];
-        $routeProvider.when(xtra_route+'/'+start,{
-            templateUrl:    xtra_route+'templates/'+menu[i]+'.html',
+        $routeProvider.when('/'+start,{
+            templateUrl:    'templates/'+menu[i]+'.html',
             controller:     menu[i]+'Controller'
         });
     }
-    $routeProvider.when(xtra_route+'/index.html',{
-        templateUrl:    xtra_route+'templates/default.html',
+    $routeProvider.when('/index.html',{
+        templateUrl:    'templates/default.html',
         controller:     'defaultController'
     }).otherwise({
-        templateUrl:    xtra_route+'templates/404.html',
+        templateUrl:    'templates/404.html',
         controller:     'defaultController'
     });
     $locationProvider.html5Mode(true);
