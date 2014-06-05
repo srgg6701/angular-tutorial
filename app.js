@@ -42,6 +42,11 @@ var app = angular.module('tApp',[])
     var alias,menus,sections = mainMenuProvider.$get();
     for(var section in sections) {
         menus = sections[section]; // default, workflow, architecture, resources, xtra
+        if(section!='default')
+            $routeProvider.when('/' + section, {
+                templateUrl: 'templates/sections/' + section + '.html',
+                controller: section + 'Controller'
+            });
         for (var i in menus) {
             alias = menus[i][0];
             var start = (alias === 'default') ? '' : alias;
