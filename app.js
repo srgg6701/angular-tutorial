@@ -45,7 +45,7 @@ var app = angular.module('tApp',[])
         if(section!='default')
             $routeProvider.when('/' + section, {
                 templateUrl: 'templates/sections/' + section + '.html',
-                controller: section + 'Controller'
+                controller: 'menuController'
             });
         for (var i in menus) {
             alias = menus[i][0];
