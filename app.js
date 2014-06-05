@@ -5,30 +5,30 @@ app.provider('mainMenu', function(){
     this.$get = function() {
         return {
             default:[
-                'default'
+                ['default','Главная']
             ],
             workflow:[
-                'skeleton',
-                'dynamic',
-                'jquery',
-                'server',
-                'crud',
-                'tests'
+                ['skeleton','Каркас сайта'],
+                ['dynamic','Динамические данные'],
+                ['jquery','Использование jQuery'],
+                ['server','Сервер'],
+                ['crud','CRUD'],
+                ['tests','Тестирование']
             ],
             architecture:[
-                'controllers',
-                'views',
-                'directives',
-                'scope',
-                'services'
+                ['controllers','Контроллеры'],
+                ['views','Область видимости'],
+                ['directives','Представления'],
+                ['scope','Директивы'],
+                ['services','Сервисы']
             ],
             resources:[
-                'learning',
-                'best'
+                ['learning','Обучение'],
+                ['best','Лучшие практики']
             ],
             xtra:[
-                'contacts',
-                'test'
+                ['contacts','Контакты'],
+                ['test','Тестовый раздел']
             ]
         }
     };
@@ -37,14 +37,15 @@ app.provider('mainMenu', function(){
 app.config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
-    var menus,sections = mainMenuProvider.$get();
+    var alias,menus,sections = mainMenuProvider.$get();
     for(var section in sections) {
         menus = sections[section]; // default, workflow, architecture, resources, xtra
         for (var i in menus) {
-            var start = (menus[i] === 'default') ? '' : menus[i];
+            alias = menus[i][0];
+            var start = (alias === 'default') ? '' : alias;
             $routeProvider.when('/' + start, {
-                templateUrl: 'templates/' + menus[i] + '.html',
-                controller: menus[i] + 'Controller'
+                templateUrl: 'templates/' + alias + '.html',
+                controller: alias + 'Controller'
             });
         }
     }
