@@ -1,78 +1,44 @@
 'use strict';
 var app = angular.module('tApp',[])
   .config( function($routeProvider, $locationProvider){
-    $routeProvider
-        .when('/',{
-            templateUrl:'templates/default.html',
-            controller: 'defaultController'
-        })		
-		// Workflow
-        .when('/skeleton',{
-            templateUrl:'templates/skeleton.html',
-            controller: 'skeletonController'
-        })
-        .when('/dynamic',{
-            templateUrl:'templates/dynamic.html',
-            controller: 'dynamicController'
-        })
-        .when('/jquery',{
-            templateUrl:'templates/jquery.html',
-            controller: 'jqueryController'
-        })
-		.when('/server',{
-            templateUrl:'templates/server.html',
-            controller: 'serverController'
-        })
-		.when('/crud',{
-            templateUrl:'templates/crud.html',
-            controller: 'crudController'
-        })
-		.when('/tests',{
-            templateUrl:'templates/tests.html',
-            controller: 'testsController'
-        })
-		// Архитектура
-        .when('/controllers',{
-            templateUrl:'templates/controllers.html',
-            controller: 'controllersController'
-        })
-        .when('/directives',{
-            templateUrl:'templates/directives.html',
-            controller: 'directivesController'
-        })
-        .when('/scope',{
-            templateUrl:'templates/scope.html',
-            controller: 'scopeController'
-        })
-        .when('/services',{
-            templateUrl:'templates/services.html',
-            controller: 'servicesController'
-        })
-        .when('/views',{
-            templateUrl:'templates/views.html',
-            controller: 'viewsController'
-        })
-		// Ресурсы		
-        .when('/learning',{
-            templateUrl:'templates/learning.html',
-            controller: 'learningController'
-        })
-        .when('/best',{
-            templateUrl:'templates/best.html',
-            controller: 'bestController'
-        })
-		// зарезервировано:
-        .when('/contacts',{
-            templateUrl:'templates/contacts.html',
-            controller: 'contactsController'
-        })
-        .when('/test',{
-            templateUrl:'templates/test.html',
-            controller: 'testController'
-        })
-        .otherwise({
-            templateUrl:'templates/404.html',
-            controller: 'defaultController'
+    // адреса разделов:
+    var menu = [
+        'default',
+        // workflow
+        'skeleton',
+        'dynamic',
+        'jquery',
+        'server',
+        'crud',
+        'tests',
+        // архитектура
+        'controllers',
+        'views',
+        'directives',
+        'scope',
+        'services',
+        // ресурсы
+        'learning',
+        'best',
+        // доп. (скрыто)
+        'contacts',
+        'test'
+    ];
+    var xtra = (location.hostname.indexOf('github.io')!=-1)?
+        "angular-tutorial/":"";
+    for(var i in menu){
+        var start=(menu[i]=='default')? '':menu[i];
+        $routeProvider.when(xtra+'/'+start,{
+            templateUrl:    'templates/'+menu[i]+'.html',
+            controller:     menu[i]+'Controller'
         });
+    }
+    $routeProvider.when(xtra+'/index.html',{
+        templateUrl:'templates/default.html',
+        controller: 'defaultController'
+    }).otherwise({
+        templateUrl:'templates/404.html',
+        controller: 'defaultController'
+    });
     $locationProvider.html5Mode(true);
 });
