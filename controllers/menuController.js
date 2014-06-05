@@ -2,6 +2,5 @@
 
 app.controller('menuController',
     function menuController($scope, mainMenu){
-        $scope.menus=mainMenu;
-        console.dir($scope.menus);
+        $scope.menus=mainMenu; //console.dir($scope.menus);
 });
