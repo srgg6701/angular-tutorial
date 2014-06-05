@@ -16,9 +16,9 @@ var app = angular.module('tApp',[])
             ],
             architecture:[
                 ['controllers','Контроллеры'],
-                ['views','Область видимости'],
-                ['directives','Представления'],
-                ['scope','Директивы'],
+                ['scope','Область видимости'],
+                ['views','Представления'],
+                ['directives','Директивы'],
                 ['services','Сервисы']
             ],
             resources:[
