@@ -1,4 +1,4 @@
 angular-tutorial
 ================
 
-Angular tutorial
+The AngularJS SuperHeroic tutorial.
