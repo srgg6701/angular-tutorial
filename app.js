@@ -24,21 +24,20 @@ var app = angular.module('tApp',[])
         'contacts',
         'test'
     ];
-    var xtra = (location.hostname.indexOf('github.io')!=-1)?
-        "angular-tutorial/":"";
+
     for(var i in menu){
         var start=(menu[i]=='default')? '':menu[i];
-        $routeProvider.when(xtra+'/'+start,{
-            templateUrl:    'templates/'+menu[i]+'.html',
+        $routeProvider.when(xtra_route+'/'+start,{
+            templateUrl:    xtra_route+'templates/'+menu[i]+'.html',
             controller:     menu[i]+'Controller'
         });
     }
-    $routeProvider.when(xtra+'/index.html',{
-        templateUrl:'templates/default.html',
-        controller: 'defaultController'
+    $routeProvider.when(xtra_route+'/index.html',{
+        templateUrl:    xtra_route+'templates/default.html',
+        controller:     'defaultController'
     }).otherwise({
-        templateUrl:'templates/404.html',
-        controller: 'defaultController'
+        templateUrl:    xtra_route+'templates/404.html',
+        controller:     'defaultController'
     });
     $locationProvider.html5Mode(true);
 });
