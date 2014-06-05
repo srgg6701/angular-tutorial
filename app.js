@@ -1,7 +1,6 @@
 'use strict';
-var app = angular.module('tApp',[]);
-
-app.provider('mainMenu', function(){
+var app = angular.module('tApp',[])
+  .provider('mainMenu', function(){
     this.$get = function() {
         return {
             default:[
@@ -32,9 +31,12 @@ app.provider('mainMenu', function(){
             ]
         }
     };
-});
-
-app.config( function($routeProvider, $locationProvider, mainMenuProvider){
+})
+  .controller('menuController',
+    function menuController($scope, mainMenu){
+        $scope.menus=mainMenu; //console.dir($scope.menus);
+})
+  .config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
     var alias,menus,sections = mainMenuProvider.$get();
