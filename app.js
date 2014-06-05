@@ -3,59 +3,37 @@ var app = angular.module('tApp',[]);
 
 app.provider('mainMenu', function(){
     this.$get = function() {
-        return {
-            def: "such the menu!"
-        }
+        return [
+                'default',
+                // workflow
+                'skeleton',
+                'dynamic',
+                'jquery',
+                'server',
+                'crud',
+                'tests',
+                // архитектура
+                'controllers',
+                'views',
+                'directives',
+                'scope',
+                'services',
+                // ресурсы
+                'learning',
+                'best',
+                // доп. (скрыто)
+                'contacts',
+                'test'
+            ]
     };
-    this.menu = [
-            'default',
-            // workflow
-            'skeleton',
-            'dynamic',
-            'jquery',
-            'server',
-            'crud',
-            'tests',
-            // архитектура
-            'controllers',
-            'views',
-            'directives',
-            'scope',
-            'services',
-            // ресурсы
-            'learning',
-            'best',
-            // доп. (скрыто)
-            'contacts',
-            'test'
-        ];
 });
 
+
+
 app.config( function($routeProvider, $locationProvider, mainMenuProvider){
-    console.dir(mainMenuProvider.menu);
+    //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
-    var menu = [
-        'default',
-        // workflow
-        'skeleton',
-        'dynamic',
-        'jquery',
-        'server',
-        'crud',
-        'tests',
-        // архитектура
-        'controllers',
-        'views',
-        'directives',
-        'scope',
-        'services',
-        // ресурсы
-        'learning',
-        'best',
-        // доп. (скрыто)
-        'contacts',
-        'test'
-    ];
+    var menu = mainMenuProvider.$get();
 
     for(var i in menu){
         var start=(menu[i]=='default')? '':menu[i];
