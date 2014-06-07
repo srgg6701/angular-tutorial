@@ -35,7 +35,7 @@ var app = angular.module('tApp',[])
   .controller('headController',
     function headController($scope, mainMenu, $location){
         //console.log($location.url());
-        var section;
+        /*var section;
         for(var cluster in mainMenu){
             section = mainMenu[cluster];
             for(var i in section){
@@ -46,7 +46,8 @@ var app = angular.module('tApp',[])
                     break;
                 }
             }
-        }//$scope.title="AngularJS the SuperHeroic tutorial";
+        }*/
+        //$scope.title="AngularJS the SuperHeroic tutorial";
 })
   .controller('menuController',
     /* получить меню, которое будет извлекаться в соответствующем шаблоне */
