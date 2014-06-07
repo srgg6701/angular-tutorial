@@ -15,6 +15,7 @@ var app = angular.module('tApp',[])
                 ['tests','Тестирование']
             ],
             architecture:[
+                ['modules','Модули'],
                 ['controllers','Контроллеры'],
                 ['scope','Область видимости'],
                 ['views','Представления'],
