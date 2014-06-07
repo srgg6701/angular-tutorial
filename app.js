@@ -33,7 +33,9 @@ var app = angular.module('tApp',[])
     };
 })
   .controller('menuController',
-    /* получить меню, которое будет извлекаться в соответствующем шаблоне */
+    /**
+    получить меню, которое будет извлекаться
+    в соответствующем шаблоне */
     function menuController($scope, mainMenu){
         $scope.menus=mainMenu;
 })

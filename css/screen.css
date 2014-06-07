@@ -75,19 +75,36 @@ code pre {
   border-radius: inherit;
 }
 
-/* line 72, ../../sass/screen.scss */
+/* line 71, ../../sass/screen.scss */
+.imgLeft {
+  float: left;
+  margin: 4px 20px auto;
+}
+
+/* line 75, ../../sass/screen.scss */
+.imgRight {
+  float: right;
+  margin: 4px auto 10px 20px;
+}
+
+/* line 79, ../../sass/screen.scss */
+.marginBottom10 {
+  margin-bottom: 10px;
+}
+
+/* line 83, ../../sass/screen.scss */
 .navbar[role="navigation"] .dropdown-menu {
   right: inherit;
 }
-/* line 76, ../../sass/screen.scss */
+/* line 87, ../../sass/screen.scss */
 .navbar[role="navigation"] a.navbar-brand {
   height: inherit;
 }
-/* line 79, ../../sass/screen.scss */
+/* line 90, ../../sass/screen.scss */
 .navbar[role="navigation"] a img {
   margin-left: -15px;
 }
-/* line 82, ../../sass/screen.scss */
+/* line 93, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
   margin-top: 21px;
@@ -95,12 +112,12 @@ code pre {
   display: inline-block;
   font-size: 1.3em;
 }
-/* line 90, ../../sass/screen.scss */
+/* line 101, ../../sass/screen.scss */
 .navbar[role="navigation"] ul:nth-child(1) {
   margin-top: 15px;
 }
 
-/* line 95, ../../sass/screen.scss */
+/* line 106, ../../sass/screen.scss */
 span.framed {
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -110,7 +127,7 @@ span.framed {
   padding: 0px 4px;
 }
 
-/* line 104, ../../sass/screen.scss */
+/* line 115, ../../sass/screen.scss */
 #super-hero {
   float: left;
   font-size: 0.7em;
