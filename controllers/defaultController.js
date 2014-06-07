@@ -1,6 +1,6 @@
 "use strict";
 
 app.controller('defaultController',
-    function defaultController($scope, $http){
-		//console.log('Hello! Default controller comes here.');
+    function defaultController($scope){
+		//$scope.title="AngularJS the SuperHeroic tutorial";
 });

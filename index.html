@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="tApp">
-  <head>
+  <head ng-controller="headController">
 <script>
     var xtra_route = '';
 	if(location.hostname.indexOf('github.io')!=-1)
@@ -14,7 +14,7 @@
     <meta name="author" content="">
     <!--<link rel="shortcut icon" href="../../assets/ico/favicon.ico">-->
 
-    <title>AngularJS the SuperHeroic tutorial</title>
+    <title ng-bind="title"></title>
 
     <!-- Bootstrap core CSS -->
     <link href="libs/css/bootstrap.min.css" rel="stylesheet">

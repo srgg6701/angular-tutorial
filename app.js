@@ -32,9 +32,26 @@ var app = angular.module('tApp',[])
         }
     };
 })
+  .controller('headController',
+    function headController($scope, mainMenu, $location){
+        //console.log($location.url());
+        var section;
+        for(var cluster in mainMenu){
+            section = mainMenu[cluster];
+            for(var i in section){
+                console.log('section: '+section[i]);
+                if('/'+section[i][0]==$location.url()){
+                    $scope.title=section[i][0];
+                    console.log('got location: '+$location.url());
+                    break;
+                }
+            }
+        }//$scope.title="AngularJS the SuperHeroic tutorial";
+})
   .controller('menuController',
+    /* получить меню, которое будет извлекаться в соответствующем шаблоне */
     function menuController($scope, mainMenu){
-        $scope.menus=mainMenu; //console.dir($scope.menus);
+        $scope.menus=mainMenu;
 })
   .config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
