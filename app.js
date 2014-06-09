@@ -22,6 +22,9 @@ var app = angular.module('tApp',[])
                 ['directives','Директивы'],
                 ['services','Сервисы']
             ],
+            test_control:[
+                ['test_control','Тест-контроль']
+            ],
             resources:[
                 ['learning','Обучение'],
                 ['best','Лучшие практики']
