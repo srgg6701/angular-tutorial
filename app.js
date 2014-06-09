@@ -1,6 +1,7 @@
 'use strict';
 var app = angular.module('tApp',[])
   .provider('mainMenu', function(){
+    // http://stackoverflow.com/questions/15666048/angular-js-service-vs-provider-vs-factory
     this.$get = function() {
         return {
             default:[
@@ -42,7 +43,39 @@ var app = angular.module('tApp',[])
     в соответствующем шаблоне */
     function menuController($scope, mainMenu){
         $scope.menus=mainMenu;
+    }
+)
+  .provider('getFileContents', function(param){
+    this.paramId = param;
+    this.$get = function(){
+        var par = this.paramId;
+        return{
+            getContents:function(){
+                return "paramId comes here: "+par;
+            }
+        }
+    }
 })
+    /*.factory( 'getFileContents', // название сервиса; $ - не используется
+        function($resourceProvider, $q){ // $q - promise-библиотека
+            var resource = $resourceProvider('/data/contents/:id', {id:'@id'});
+            return{ // возвращает данные (data), полученные из JSON-файла
+                getFileContents: function(paramId){
+                    var deffered = $q.defer(); // http://angular.ru/api/ng.$q
+                    resource.get({
+                        id:paramId
+                    },
+                    function(param){
+                        deffered.resolve(param);
+                    },
+                    function(response){
+                        deffered.reject(response);
+                    });
+                    return deffered.promise;
+                }
+            };
+        }
+)*/
   .config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
