@@ -45,7 +45,15 @@ var app = angular.module('tApp',[])
         $scope.menus=mainMenu;
     }
 )
-  .provider('getFileContents', function(param){
+  .service('getFileContents', function(){
+        return {
+            getContents: function (param) {
+                //function logic goes here
+                return "paramId comes here: "+param;
+            }
+        }
+})
+  /*.provider('getFileContents', function(param){
     this.paramId = param;
     this.$get = function(){
         var par = this.paramId;
@@ -55,7 +63,7 @@ var app = angular.module('tApp',[])
             }
         }
     }
-})
+})*/
     /*.factory( 'getFileContents', // название сервиса; $ - не используется
         function($resourceProvider, $q){ // $q - promise-библиотека
             var resource = $resourceProvider('/data/contents/:id', {id:'@id'});
