@@ -1,4 +1,7 @@
 'use strict';
+/**
+ * Основной модуль
+ */
 var app = angular.module('tApp',['ngResource'])
   .provider('mainMenu', function(){
     // http://stackoverflow.com/questions/15666048/angular-js-service-vs-provider-vs-factory
@@ -36,15 +39,17 @@ var app = angular.module('tApp',['ngResource'])
             ]
         }
     };
-})
+  }
+) /**
+    * Получить меню, которое будет извлекаться в соответствующем шаблоне
+   */
   .controller('menuController',
-    /**
-    получить меню, которое будет извлекаться
-    в соответствующем шаблоне */
     function menuController($scope, mainMenu){
         $scope.menus=mainMenu;
     }
-)
+) /**
+    * Извлечение данных из файла
+    */
   .factory('getFileContents',
     function($resource, $q){
         return {
@@ -62,7 +67,10 @@ var app = angular.module('tApp',['ngResource'])
                 return deffered.promise;
             }
         }
-})
+    }
+) /**
+    * Роутинг
+    */
   .config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
