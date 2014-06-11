@@ -99,37 +99,53 @@ code pre {
   border: inherit;
   border-radius: inherit;
 }
+/* line 84, ../../sass/screen.scss */
+.code-inline code {
+  display: inline-block;
+  margin: auto;
+}
 
-/* line 85, ../../sass/screen.scss */
+/* line 89, ../../sass/screen.scss */
+.display-table {
+  display: table;
+}
+
+/* line 92, ../../sass/screen.scss */
+hr[data-param="thick"] {
+  border: solid 1px #ccc;
+  margin-bottom: 30px;
+}
+
+/* line 96, ../../sass/screen.scss */
 .imgLeft {
   float: left;
   margin: 4px 20px auto;
 }
 
-/* line 89, ../../sass/screen.scss */
+/* line 100, ../../sass/screen.scss */
 .imgRight {
   float: right;
   margin: 4px auto 10px 20px;
 }
 
-/* line 93, ../../sass/screen.scss */
+/* line 104, ../../sass/screen.scss */
 .marginBottom10 {
   margin-bottom: 10px;
 }
 
-/* line 97, ../../sass/screen.scss */
+/* line 108, ../../sass/screen.scss */
 .navbar[role="navigation"] .dropdown-menu {
   right: inherit;
 }
-/* line 101, ../../sass/screen.scss */
+/* line 112, ../../sass/screen.scss */
 .navbar[role="navigation"] a.navbar-brand {
   height: inherit;
 }
-/* line 104, ../../sass/screen.scss */
+/* line 115, ../../sass/screen.scss */
 .navbar[role="navigation"] a img {
   margin-left: -15px;
 }
-/* line 107, ../../sass/screen.scss */
+/* line 118, ../../sass/screen.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
   margin-top: 21px;
@@ -137,17 +153,31 @@ code pre {
   display: inline-block;
   font-size: 1.3em;
 }
-/* line 115, ../../sass/screen.scss */
+/* line 126, ../../sass/screen.scss */
 .navbar[role="navigation"] ul:nth-child(1) {
   margin-top: 15px;
 }
 
-/* line 119, ../../sass/screen.scss */
+/* line 130, ../../sass/screen.scss */
 .padding20 {
   padding: 20px;
 }
 
-/* line 123, ../../sass/screen.scss */
+/* line 137, ../../sass/screen.scss */
+.sections section:last-child hr.closer {
+  display: none;
+}
+/* line 142, ../../sass/screen.scss */
+.sections section a[ng-click^="goTop"] {
+  margin-bottom: -12px;
+  display: table;
+}
+/* line 146, ../../sass/screen.scss */
+.sections section h4 {
+  margin-top: 24px;
+}
+
+/* line 152, ../../sass/screen.scss */
 span.framed {
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -157,7 +187,7 @@ span.framed {
   padding: 0px 4px;
 }
 
-/* line 132, ../../sass/screen.scss */
+/* line 161, ../../sass/screen.scss */
 #super-hero {
   float: left;
   font-size: 0.7em;
