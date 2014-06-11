@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('tApp',[])
+var app = angular.module('tApp',['ngResource'])
   .provider('mainMenu', function(){
     // http://stackoverflow.com/questions/15666048/angular-js-service-vs-provider-vs-factory
     this.$get = function() {
@@ -45,45 +45,27 @@ var app = angular.module('tApp',[])
         $scope.menus=mainMenu;
     }
 )
-  .service('getFileContents', function(){
+  .factory('getFileContents',
+    function($resource, $q){
+        var resource = $resource('/data/contents/:id', {id:'@id'});
         return {
-            getContents: function (param) {
-                //function logic goes here
-                return "paramId comes here: "+param;
-            }
-        }
-})
-  /*.provider('getFileContents', function(param){
-    this.paramId = param;
-    this.$get = function(){
-        var par = this.paramId;
-        return{
-            getContents:function(){
-                return "paramId comes here: "+par;
-            }
-        }
-    }
-})*/
-    /*.factory( 'getFileContents', // название сервиса; $ - не используется
-        function($resourceProvider, $q){ // $q - promise-библиотека
-            var resource = $resourceProvider('/data/contents/:id', {id:'@id'});
-            return{ // возвращает данные (data), полученные из JSON-файла
-                getFileContents: function(paramId){
-                    var deffered = $q.defer(); // http://angular.ru/api/ng.$q
-                    resource.get({
-                        id:paramId
+            getContents: function (param) { // http://stackoverflow.com/questions/24129421/can-i-pass-a-param-from-controller-into-service-in-angularjs
+                //return "paramId comes here: "+param;
+                var deffered = $q.defer(); // http://angular.ru/api/ng.$q
+                resource.get({
+                        id:param
                     },
-                    function(param){
-                        deffered.resolve(param);
+                    function(event){
+                        deffered.resolve(event);
                     },
                     function(response){
                         deffered.reject(response);
-                    });
-                    return deffered.promise;
-                }
-            };
+                    }
+                );
+                return deffered.promise;
+            }
         }
-)*/
+})
   .config( function($routeProvider, $locationProvider, mainMenuProvider){
     //console.dir(mainMenuProvider.$get().menu);
     // адреса разделов:
