@@ -31,7 +31,8 @@ var app = angular.module('tApp',['ngResource'])
             ],
             resources:[
                 ['learning','Обучение'],
-                ['best','Лучшие практики']
+                ['best','Лучшие практики'],
+                ['components','Компоненты']
             ],
             xtra:[
                 ['contacts','Контакты'],
