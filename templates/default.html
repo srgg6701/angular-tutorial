@@ -1,34 +1,61 @@
-<div class="row marginBottom10">
-	<img class="imgLeft" src="../images/angular-hero.jpg" width="302" height="167" alt=""/>
-	<div class="pull-left" style="margin-left:2%">
+<div class="row">
+    <img class="imgLeft" src="../images/angular-hero.jpg" width="302" height="167" alt=""/>
+    <div class="pull-left" style="margin-left:2%">
         <h3>Интенсив-тьюториал по созданию сайта на основе AngularJS.</h3>
+
         <h1 style="color:brown;">Только для супергероев!</h1>
         <h5>Или тех, кто хотя бы хочет им стать.</h5>
     </div>
 </div>
-<div class="row padding20" style="padding-bottom:0;">
-<img class="pull-right" src="../images/angular-google.jpg" id="angular-google" alt=""/>
-<p>
-	<span class="padding20" style="background-color:#A10A0A;border-radius: 4px;color: white;display: table-cell;"><!--Примчался, взялся, построил &#8212;-->
-        <!--<div></div>
-        <div>От общего &#8212; к частному!</div>-->
-        Данный тьюториал задуман как сугубо
+<br/>
+<div class="row next-padding20">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 dark-red border-radius-base">
+        <p>Данный тьюториал задуман как сугубо
         практическое пособие. В отличие от большинства других, он посвящён не
         какому-либо одному аспекту разработки приложения. Его цель — прежде всего —
         дать вам видение процесса в целом и познакомить с основами предлагаемой данным
-        JS-фреймворком методики создания web-приложений. </span>
-	<div class="padding20">
-        <p>При этом некоторые важные моменты, без  которых создание современного приложения невозможно, будут рассмотрены настолько подробно, насколько это необходимо.</p>
-            
-        <p>Иначе говоря, здесь применён подход &laquo;от общего к частному&raquo;. </p>
+        JS-фреймворком методики создания web-приложений.</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 border-radius-base border-radius-base">
+        <p>Кроме прочего, было бы полезно попутно использовать всё, что делает работу любимой и увлекательной, все наиболее соверменные эффективные инструменты. Итак, здесь есть: bootstrap (LESS), SASS+Compass, NodeJS (для сервеной части), jQuery. Для подсветки кода выбран higlightjs.</p>
+        <P>Но основной упор, безусловно, сделан на AngularJS как таковом.</P>
     </div>
 </div>
-<div class="row marginBottom10">
-<img id="angulars" class="imgLeft" src="../images/angulars.jpg" alt=""/>
-    <span class="padding20" style="display:table-cell;">
-        <p>
-          Самым общим в данном случае является создание сайта как такового, в простейшем варианте — его <a href="skeleton">каркаса</a>, структуры. </p>
-        <p>Далее будет рассмотрен второй важнейший вопрос — оперирование динамическими данными. Здесь в общих чертах будут исследованы основные концепции Angular — <a href="scope">scope</a> (области видимости), <a href="modules">модули</a>, <a href="controllers">контроллеры</a>, <a href="directives">директивы</a>, <a href="services">сервисы</a> и т.п., а также базисный архитектурный паттерн MVC. </p>
-        <p>Более подробно об этом можно узнать в секции <a href="architecture">Архитектура</a>. В разделе <a href="resources">Ресурсы</a> приведены ссылки на другие полезные материалы, которые помогут вам углубиться в предмет.</p>
-    </span>
+<br/>
+<div class="row next-padding20">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
+        <div class="bg-ccc border-radius-base">
+            <h2><span class="caret"></span>Workflow</h2>
+            <ul class="dropdown-menu">
+                <li ng-repeat="menu in menus.workflow">
+                    <a href="/{{menu[0]}}">{{menu[1]}}</a>
+                </li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
+        <div class="bg-eee border-radius-base">
+            <h2><span class="caret"></span>Архитектура</h2>
+            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
+        <div class="bg-ccc border-radius-base">
+            <h2><span class="caret"></span>Тест контроль</h2>
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+            <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
+        <div class="bg-eee border-radius-base">
+            <h2><span class="caret"></span>Ресурсы</h2>
+            <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+        </div>
+    </div>
 </div>
+<!--<div>
+    <img class="pull-right" src="../images/angular-google.jpg" id="angular-google" alt=""/>
+    </div>-->
+
