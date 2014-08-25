@@ -36,7 +36,7 @@
 
 /* line 23, ../../sass/classes.scss */
 .dark-red {
-  background-color: #A10A0A;
+  background-color: #a10a0a;
   color: white;
 }
 
@@ -140,36 +140,57 @@ code pre {
 }
 
 /* line 60, ../../sass/elements.scss */
-h2 .caret {
+#review h2 {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: default;
+  font-size: 24px;
+  margin: -4px -6px 6px;
+  padding: 6px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+/* line 67, ../../sass/elements.scss */
+#review h2:hover {
+  background-color: #666;
+  color: white;
+}
+/* line 71, ../../sass/elements.scss */
+#review h2 .caret {
   zoom: 2;
   margin-right: 2px;
 }
 
-/* line 65, ../../sass/elements.scss */
+/* line 77, ../../sass/elements.scss */
 hr[data-param="thick"] {
   border: solid 1px #ccc;
   margin-bottom: 30px;
 }
 
-/* line 70, ../../sass/elements.scss */
+/* line 82, ../../sass/elements.scss */
 .bottom-menu section {
   margin-right: 15px;
 }
-/* line 76, ../../sass/elements.scss */
+/* line 88, ../../sass/elements.scss */
 .sections section:last-child hr.closer {
   display: none;
 }
-/* line 81, ../../sass/elements.scss */
+/* line 93, ../../sass/elements.scss */
 .sections section a[ng-click^="goTop"] {
   margin-bottom: -12px;
   display: table;
 }
-/* line 85, ../../sass/elements.scss */
+/* line 97, ../../sass/elements.scss */
 .sections section h4 {
   margin-top: 24px;
 }
 
-/* line 91, ../../sass/elements.scss */
+/* line 103, ../../sass/elements.scss */
 span.framed {
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -179,9 +200,18 @@ span.framed {
   padding: 0px 4px;
 }
 
-/* line 102, ../../sass/elements.scss */
+/* line 114, ../../sass/elements.scss */
 .navbar[role="navigation"] ul:nth-child(1) {
   margin-top: 15px;
+}
+/* line 118, ../../sass/elements.scss */
+#review ul {
+  display: none;
+  padding-left: 22px;
+}
+/* line 121, ../../sass/elements.scss */
+#review ul li {
+  list-style: none;
 }
 
 /* line 1, ../../sass/layout.scss */

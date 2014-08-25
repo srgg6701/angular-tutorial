@@ -22,11 +22,11 @@
     </div>
 </div>
 <br/>
-<div class="row next-padding20">
+<div class="row next-padding20" id="review">
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
         <div class="bg-ccc border-radius-base">
-            <h2><span class="caret"></span>Workflow</h2>
-            <ul class="dropdown-menu">
+            <h2 ng-click="toggleSubmenu($event.currentTarget)"><span class="caret"></span>Workflow</h2>
+            <ul>
                 <li ng-repeat="menu in menus.workflow">
                     <a href="/{{menu[0]}}">{{menu[1]}}</a>
                 </li>
@@ -37,20 +37,35 @@
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
         <div class="bg-eee border-radius-base">
-            <h2><span class="caret"></span>Архитектура</h2>
+            <h2 ng-click="toggleSubmenu($event.currentTarget)"><span class="caret"></span>Архитектура</h2>
+            <ul>
+                <li ng-repeat="menu in menus.architecture">
+                    <a href="/{{menu[0]}}">{{menu[1]}}</a>
+                </li>
+            </ul>
             <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</p>
         </div>
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
         <div class="bg-ccc border-radius-base">
-            <h2><span class="caret"></span>Тест контроль</h2>
+            <h2 ng-click="toggleSubmenu($event.currentTarget)"><span class="caret"></span>Тест контроль</h2>
+            <ul>
+                <li ng-repeat="menu in menus.test_control">
+                    <a href="/{{menu[0]}}">{{menu[1]}}</a>
+                </li>
+            </ul>
             <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
             <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я.</p>
         </div>
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 next-padding20">
         <div class="bg-eee border-radius-base">
-            <h2><span class="caret"></span>Ресурсы</h2>
+            <h2 ng-click="toggleSubmenu($event.currentTarget)"><span class="caret"></span>Ресурсы</h2>
+            <ul>
+                <li ng-repeat="menu in menus.resources">
+                    <a href="/{{menu[0]}}">{{menu[1]}}</a>
+                </li>
+            </ul>
             <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
         </div>
     </div>
