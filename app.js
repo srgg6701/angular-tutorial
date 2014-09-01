@@ -85,7 +85,7 @@ var app = angular.module('tApp',['ngResource'])
                     controller: 'menuController'
                 }).when('/temp', {
                     templateUrl: 'templates/temp.html',
-                    controller: 'defaultController'
+                    controller: 'testController' // NOT temp!
                 });
         for (var i in menus) {
             alias = menus[i][0];

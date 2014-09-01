@@ -1,5 +1,4 @@
 "use strict";
-
 app.controller('defaultController',
     function defaultController($scope,mainMenu){
         //console.dir(mainMenu);

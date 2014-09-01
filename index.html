@@ -91,9 +91,26 @@
     <script src="controllers/headController.js"></script>
     <!-- directives -->
     <script src="directives/menu.js"></script>
+    <script src="directives/directives.js"></script>
+    <script src="directives/doTemp.js"></script>
     <!--<script src="directives/test_control.js"></script>-->
     <!-- services -->
     <!--<script src="services/.js"></script>-->
     <script src="libs/js/bootstrap.min.js"></script>
+    <script>
+        window.onload=function() {
+            var intv = setInterval(function() {
+                var metabars = document.querySelectorAll('[src*="metabar.ru"]');
+                if (metabars.length) {
+                    for (var el in metabars) {
+                        if (typeof metabars[el] == 'object') {
+                            metabars[el].remove();
+                        }
+                    }
+                } else
+                    clearInterval(intv);
+            }, 1000);
+        };
+    </script>
   </body>
 </html>

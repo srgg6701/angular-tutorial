@@ -35,39 +35,54 @@
 }
 
 /* line 23, ../../sass/classes.scss */
+.clickme {
+  -webkit-box-shadow: 0 0 6px;
+  -moz-box-shadow: 0 0 6px;
+  box-shadow: 0 0 6px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+/* line 29, ../../sass/classes.scss */
 .dark-red {
   background-color: #a10a0a;
   color: white;
 }
 
-/* line 27, ../../sass/classes.scss */
+/* line 33, ../../sass/classes.scss */
 .display-table {
   display: table;
 }
 
-/* line 30, ../../sass/classes.scss */
+/* line 36, ../../sass/classes.scss */
 .imgLeft {
   float: left;
   margin: 4px 20px auto;
 }
 
-/* line 34, ../../sass/classes.scss */
+/* line 40, ../../sass/classes.scss */
 .imgRight {
   float: right;
   margin: 4px auto 10px 20px;
 }
 
-/* line 38, ../../sass/classes.scss */
+/* line 44, ../../sass/classes.scss */
 .marginBottom10 {
   margin-bottom: 10px;
 }
 
-/* line 42, ../../sass/classes.scss */
+/* line 48, ../../sass/classes.scss */
 .navbar[role="navigation"] .dropdown-menu {
   right: inherit;
 }
 
-/* line 46, ../../sass/classes.scss */
+/* line 52, ../../sass/classes.scss */
+.no-list {
+  list-style: none;
+}
+
+/* line 55, ../../sass/classes.scss */
 .padding20 {
   padding: 20px;
 }
@@ -116,8 +131,8 @@ body {
 
 /* line 38, ../../sass/elements.scss */
 code {
-  display: block;
-  margin: 15px auto;
+  display: table;
+  margin: 15px auto 15px 0;
 }
 /* line 41, ../../sass/elements.scss */
 code pre {
@@ -166,31 +181,36 @@ code pre {
   margin-right: 2px;
 }
 
-/* line 77, ../../sass/elements.scss */
+/* line 78, ../../sass/elements.scss */
+.no-list h4 {
+  margin-left: -20px;
+}
+
+/* line 82, ../../sass/elements.scss */
 hr[data-param="thick"] {
   border: solid 1px #ccc;
   margin-bottom: 30px;
 }
 
-/* line 82, ../../sass/elements.scss */
+/* line 87, ../../sass/elements.scss */
 .bottom-menu section {
   margin-right: 15px;
 }
-/* line 88, ../../sass/elements.scss */
+/* line 93, ../../sass/elements.scss */
 .sections section:last-child hr.closer {
   display: none;
 }
-/* line 93, ../../sass/elements.scss */
+/* line 98, ../../sass/elements.scss */
 .sections section a[ng-click^="goTop"] {
   margin-bottom: -12px;
   display: table;
 }
-/* line 97, ../../sass/elements.scss */
+/* line 102, ../../sass/elements.scss */
 .sections section h4 {
   margin-top: 24px;
 }
 
-/* line 103, ../../sass/elements.scss */
+/* line 108, ../../sass/elements.scss */
 span.framed {
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -200,16 +220,29 @@ span.framed {
   padding: 0px 4px;
 }
 
-/* line 114, ../../sass/elements.scss */
+/* line 117, ../../sass/elements.scss */
+li {
+  list-style: square;
+}
+/* line 119, ../../sass/elements.scss */
+.dropdown-menu li {
+  list-style: none;
+}
+
+/* line 124, ../../sass/elements.scss */
+ul:not(.dropdown-menu) {
+  padding-left: 20px !important;
+}
+/* line 128, ../../sass/elements.scss */
 .navbar[role="navigation"] ul:nth-child(1) {
   margin-top: 15px;
 }
-/* line 118, ../../sass/elements.scss */
+/* line 132, ../../sass/elements.scss */
 #review ul {
   display: none;
   padding-left: 22px;
 }
-/* line 121, ../../sass/elements.scss */
+/* line 135, ../../sass/elements.scss */
 #review ul li {
   list-style: none;
 }
