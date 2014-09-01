@@ -79,10 +79,14 @@ var app = angular.module('tApp',['ngResource'])
     for(var section in sections) {
         menus = sections[section]; // default, workflow, architecture, resources, xtra
         if(section!='default')
-            $routeProvider.when('/' + section, {
-                templateUrl: 'templates/sections/' + section + '.html',
-                controller: 'menuController'
-            });
+            $routeProvider
+                .when('/' + section, {
+                    templateUrl: 'templates/sections/' + section + '.html',
+                    controller: 'menuController'
+                }).when('/temp', {
+                    templateUrl: 'templates/temp.html',
+                    controller: 'defaultController'
+                });
         for (var i in menus) {
             alias = menus[i][0];
             var start = (alias === 'default') ? '' : alias;
