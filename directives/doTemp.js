@@ -1,9 +1,9 @@
 'use strict';
-app .directive('doTemp1', function (){
+app .directive('doTemp1', function (Directives){
         return{
             restrict:   'A',
             //replace:    true,
-            template:   "<div>Temp 1 directive is working here...</div>"
+            template:   Directives.doTemp1//"<div>Temp 1 directive is working here...</div>"
             /*func:function(scope, element, attrs, controller){
              console.log('Temp is working now...');
              }*/
