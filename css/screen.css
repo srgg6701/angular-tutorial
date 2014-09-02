@@ -116,7 +116,7 @@
 /* line 24, ../../sass/elements.scss */
 .navbar[role="navigation"] a b {
   margin-left: 6px;
-  margin-top: 21px;
+  margin-top: 27px;
   float: left;
   display: inline-block;
   font-size: 1.3em;
@@ -289,9 +289,9 @@ html, body {
 /* line 30, ../../sass/screen.scss */
 #super-hero {
   float: left;
-  font-size: 0.7em;
+  font-size: 1.6em;
   font-weight: bold;
-  color: #0060A2;
+  color: #A82424;
   margin-left: -80px;
   margin-top: 5px;
 }
