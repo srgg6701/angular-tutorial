@@ -64,9 +64,15 @@
     </div>
     <!-- libs -->
     <script src="libs/js/jquery.min.js"></script>
-    <script src="libs/js/angular.js"></script>
-    <script src="libs/js/angular-resource.js"></script>
+    <script src="libs/bower_components/angular/angular.js"></script>
+    <script src="libs/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="libs/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="libs/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="app.js"></script>
+    <!-- services -->
+    <script src="services/sections.js"></script>
+    <!-- config (router) -->
+    <script src="config.js"></script>
 	<!-- controllers -->
     <script src="controllers/bestController.js"></script>
     <script src="controllers/componentsController.js"></script>
@@ -110,6 +116,14 @@
                 } else
                     clearInterval(intv);
             }, 1000);
+            /*var innerCode,  sels=document.querySelectorAll('pre.code_html');
+            console.dir(sels);*/
+            /*for(var i in sels){
+                innerCode = sels[i].innerHTML.replace(/</g,'&lt;');
+                innerCode = innerCode.replace(/>/g,'&gt;');
+                console.log(innerCode);
+                console.dir(sels[i]);
+            }*/
         };
     </script>
   </body>

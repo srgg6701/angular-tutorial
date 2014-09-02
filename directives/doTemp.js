@@ -40,8 +40,8 @@ app .directive('doTemp1', function (){
             return{ // The $compile service walks the DOM tree looking for DOM elements with directives declared on them
                 restrict:   'E',
                 link:function(scope, element){/*, attrs, controller*/
-                    var markup = '<div>Compiled content comes here!</div>';
-                    angular.element(element).html($compile(markup)(scope));
+                    var elementHTML = '<div>Compiled content comes here!</div>';
+                    angular.element(element).html($compile(elementHTML)(scope));
                 }
             }
     });

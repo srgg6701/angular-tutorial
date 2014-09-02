@@ -8,4 +8,10 @@ app.controller('defaultController',
             //usefor: использование jquery
             $(header).parent().find('ul').fadeToggle(300);
         }
-});
+})
+/* Получить меню, которое будет извлекаться в соответствующем шаблоне */
+.controller('menuController',
+    function menuController($scope, mainMenu){
+        $scope.menus=mainMenu;
+    }
+);

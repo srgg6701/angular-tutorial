@@ -7,13 +7,27 @@
 <ol>
     <li>Стандартным HTML-элементом. Чтобы Angular <q>понимал</q> предназначение этого элемента, он должен либо иметь специальный пользовательский атрибут, либо класс, связанный с директивой.
     <p>Например &#8212</p>
-        <div>&lt;div <b>my-dir</b>&gt;&lt;/div&gt; (атрибут): <div click-me1 class="clickme">Клацни меня, я перекрашусь!</div>
-        <bdo>Test here</bdo>
-        <pre><code></code></pre>
-    </div>
-    <div>&lt;div <b>class="my-dir"</b>&gt;&lt;/div&gt; (класс): <div class="clickme my-dir">Клацни меня здесь, мне понравилось!</div></div>
+        <span>{{code.code1}}</span> (атрибут): <div click-me1 class="clickme">Клацни меня, я перекрашусь!</div>
+        <hr/>
+    <span>{{code.code2}}</span> (класс): <div class="clickme my-dir">Клацни меня здесь, мне понравилось!</div>
+        <hr/>
     </li>
     <li>Пользовательский элемент, не являющийся обычным HTML-элементом. Ссылка на него так же размещается в директиве.</li>
     <li>HTML-комментарием.</li>
 </ol>
+<hr/>
+<h2>Temp file</h2>
+<h3>doTemp1</h3>
+<div do-temp1></div>
+<h3>doTemp2</h3>
+<do-temp2></do-temp2>
+<h3>doTemp3</h3>
+<div class="do-temp3"></div>
+<h3>doLink</h3>
+<do-link></do-link>
+<h3>doCompile</h3>
+<do-compile></do-compile>
+<hr/>
+<textarea rows="4" name="txtArea" id="txtArea" cols="30" rows="10" ng-model="temp_model"></textarea>
+<div>{{temp_model}}</div>
 <script src="libs/_highlight/calling.js"></script>
